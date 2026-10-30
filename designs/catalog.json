@@ -1,0 +1,123 @@
+[
+  {
+    "id": "pink-reverie",
+    "name": "Pink Reverie",
+    "file": "IMG_2641",
+    "category": "Statement",
+    "description": "Berry French tips, delicate flowers, and gold accents."
+  },
+  {
+    "id": "golden-ghosts",
+    "name": "Golden Ghosts",
+    "file": "IMG_2643",
+    "category": "Seasonal",
+    "description": "Golden tones with tiny ghost details."
+  },
+  {
+    "id": "cherry-drip",
+    "name": "Final Cut",
+    "file": "IMG_2632",
+    "category": "Seasonal",
+    "description": "A Scream-inspired face with dark drips on a rosy base."
+  },
+  {
+    "id": "ocean-treasure",
+    "name": "Ocean Treasure",
+    "file": "IMG_2631",
+    "category": "Statement",
+    "description": "Ocean-blue accents with sculptural gold textures."
+  },
+  {
+    "id": "blue-daydream",
+    "name": "Blue Daydream",
+    "file": "IMG_2647",
+    "category": "Statement",
+    "description": "Electric blues, little stars, and sunny yellow details."
+  },
+  {
+    "id": "after-hours",
+    "name": "Crimson Web",
+    "file": "IMG_2644",
+    "category": "Seasonal",
+    "description": "Spider webs, blood drips, and silver shimmer for Halloween."
+  },
+  {
+    "id": "golden-hour",
+    "name": "Azure Gold",
+    "file": "IMG_2626",
+    "category": "Statement",
+    "description": "Ocean blues, golden details, and tiny hand-painted accents.",
+    "rotation": -90
+  },
+  {
+    "id": "midnight-muse",
+    "name": "Midnight Muse",
+    "file": "IMG_2630",
+    "category": "Statement",
+    "description": "Moody blue and black artwork with dreamy highlights."
+  },
+  {
+    "id": "ribbon-romance",
+    "name": "Scarlet Edge",
+    "file": "IMG_2634",
+    "category": "Statement",
+    "description": "Bold red ribbons, sculptural details, and gold accents."
+  },
+  {
+    "id": "wild-at-heart",
+    "name": "A Little of Everything",
+    "file": "IMG_2646",
+    "category": "Miscellaneous",
+    "description": "A mix of individual nail art samples. Pick a detail you love for your own custom set.",
+    "inspiration": true
+  },
+  {
+    "id": "holiday-sweetheart",
+    "name": "High Stakes",
+    "file": "IMG_2628",
+    "category": "Statement",
+    "description": "Eight balls, dice, and lucky details with a casino twist."
+  },
+  {
+    "id": "merry-little-details",
+    "name": "Funhouse",
+    "file": "IMG_2637",
+    "category": "Statement",
+    "description": "Clown-inspired artwork, playful patterns, and carnival reds."
+  },
+  {
+    "id": "neon-mischief",
+    "name": "Honeycomb",
+    "file": "IMG_2636",
+    "category": "Statement",
+    "description": "Sweet bumblebee stripes, honeycomb details, and little flowers."
+  },
+  {
+    "id": "spooky-season",
+    "name": "Wild Card",
+    "file": "IMG_2640",
+    "category": "Statement",
+    "description": "Joker-inspired faces, purple and green, and a little chaos."
+  },
+  {
+    "id": "barely-blush",
+    "name": "Barely Blush",
+    "file": "IMG_2627",
+    "category": "Minimal",
+    "description": "Soft blush with a glossy, understated finish."
+  },
+  {
+    "id": "midnight-spell",
+    "name": "Gotham Nights",
+    "file": "IMG_2645",
+    "category": "Statement",
+    "description": "Batman-inspired artwork in black and silver on a pale base."
+  },
+  {
+    "id": "comic-crush",
+    "name": "Comic Crush",
+    "file": "IMG_2638",
+    "category": "Statement",
+    "description": "Graphic nail artwork in red, black, and yellow."
+  }
+]

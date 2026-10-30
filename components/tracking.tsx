@@ -1,0 +1,15 @@
+"use client";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import { ArrowRight } from "lucide-react";
+const explanations: Record<string, string> = { received: "Your ideas have arrived safely. Hailey will be in touch using the contact details you shared.", reviewing: "Hailey is looking through the little details of your design.", quoted: "Hailey has prepared your quote. Check the contact method you shared for the details.", agreed: "You and Hailey have agreed on the next steps for your design.", creating: "Your little work of art is in the making.", completed: "Your custom request is complete. Please check your messages for fulfillment details.", closed: "This inquiry has been closed. You can message Hailey if you have a question." };
+export function Tracking() {
+  const params = useSearchParams(), [reference, setReference] = useState(params.get("ref") || ""), [token, setToken] = useState(""), [busy, setBusy] = useState(false), [error, setError] = useState(""), [result, setResult] = useState<{ reference: string; status: string; created_at: string } | null>(null);
+  useEffect(() => { const value = window.location.hash.slice(1); if (value) { setToken(value); window.history.replaceState(null, "", window.location.pathname + window.location.search); } }, []);
+  async function submit(e: React.FormEvent) {
+    e.preventDefault(); setBusy(true); setError(""); setResult(null);
+    try { const response = await fetch("/api/inquiries/track", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ reference, token }) }); const data = await response.json(); if (!response.ok) throw new Error(data.error); setResult(data); }
+    catch (e) { setError(e instanceof Error ? e.message : "Unable to find that inquiry."); } finally { setBusy(false); }
+  }
+  return <div className="tracking-form"><form onSubmit={submit}><div className="form-grid"><label className="form-field full">Inquiry reference<input required value={reference} onChange={e => setReference(e.target.value.toUpperCase())} placeholder="NBH-…" maxLength={20} /></label><label className="form-field full">Private access token<input required type="password" value={token} onChange={e => setToken(e.target.value)} maxLength={100} autoComplete="off" /><small>This is filled in when you use your private tracking link.</small></label></div>{error && <div className="error-message" role="alert">{error}</div>}<button className="button button-dark" disabled={busy} style={{ marginTop: 22 }}>{busy ? "Checking your request…" : "Check my little details"}<ArrowRight size={16} /></button></form>{result && <div className="tracking-result" role="status"><span className="eyebrow">{result.reference}</span><h2>{result.status.charAt(0).toUpperCase() + result.status.slice(1)}</h2><p>{explanations[result.status] || "Hailey will be in touch with an update."}</p><p className="inline-note">Sent {new Date(result.created_at).toLocaleDateString("en-US", { dateStyle: "medium" })}. This is an inquiry status, not a payment confirmation.</p></div>}</div>;
+}

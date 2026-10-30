@@ -1,0 +1,211 @@
+/* Selected Blush Atelier design: shorter copy, actual branding, natural page height. */
+html,body{margin:0;padding:0;height:auto;min-height:100%;overflow-x:hidden;overflow-y:auto;background:#fcf8f4}
+body{font-family:'DM Sans',Arial,sans-serif}
+#nbh-designs{max-width:none;margin:auto}
+#nbh-designs .n-stage,#nbh-designs .n-site,#nbh-designs .n-main{min-height:0!important;height:auto!important}
+#nbh-designs .n-site{overflow:visible}
+#nbh-designs .n-brand{align-items:center;gap:13px;font-size:30px!important}
+#nbh-designs .n-brand-logo{width:74px;height:74px;object-fit:cover;border-radius:50%;flex-shrink:0}
+#nbh-designs .n-nav{min-height:112px}
+#nbh-designs .n-navlinks{gap:24px}
+#nbh-designs .n-navlinks button{font-size:12px}
+#nbh-designs .n-navlinks button[aria-current=page]{text-decoration:underline;text-underline-offset:6px}
+#nbh-designs .n-nav-contact{font-size:13px!important}
+#nbh-designs .n-hero{padding-block:44px 54px;min-height:565px;gap:65px}
+#nbh-designs .n-hero-copy p{font-size:14px;line-height:1.75}
+#nbh-designs .n-hero .n-kicker{font-size:10px}
+#nbh-designs .n-hero .n-actions .n-btn{font-size:14px;min-height:48px}
+#nbh-designs .n-hero .n-actions .n-link{font-size:12px}
+#nbh-designs .n-hero-figure{margin:0 10px 0 0;position:relative;min-width:0}
+#nbh-designs .n-blush .n-hero-photo{width:100%;aspect-ratio:.99;max-height:510px;min-height:0;margin:0;border-radius:260px 260px 7px 7px;overflow:hidden;box-shadow:9px 12px 0 #efe5de;position:relative}
+#nbh-designs .n-blush .n-hero-photo>img{width:100%;height:100%;object-fit:cover;object-position:50% 58%;border-radius:inherit}
+#nbh-designs .n-hero-figure figcaption{font:400 23px/1.2 'Caveat',cursive;text-align:right;color:var(--n-accent);padding-top:15px;padding-right:4px}
+#nbh-designs .n-values{font-size:11px;justify-content:center;gap:85px;padding-block:17px}
+#nbh-designs .n-section{padding-block:46px}
+#nbh-designs .n-section-head{margin-bottom:27px}
+#nbh-designs .n-section-head h2{margin-top:0}
+#nbh-designs .n-product-image{aspect-ratio:1.3}
+#nbh-designs .n-product-image img{object-fit:contain;background:#e9c3ce}
+#nbh-designs .n-product-caption{flex-direction:column;gap:7px}
+#nbh-designs .n-product-caption .n-link{font-size:11px}
+#nbh-designs .n-filters button{font-size:11px}
+#nbh-designs .n-filters .n-result-count{font-size:11px}
+#nbh-designs .n-catalog-note{font-size:11px;margin-top:30px}
+#nbh-designs .n-custom-banner{grid-template-columns:.3fr 1.4fr auto;padding:29px 33px;gap:24px}
+#nbh-designs .n-custom-banner h2{font-size:40px;margin:0}
+#nbh-designs .n-custom-banner p{font-size:12px;max-width:410px}
+#nbh-designs .n-custom-doodle{font-family:Georgia,serif;font-size:75px;line-height:1}
+#nbh-designs .n-how{padding-block:35px 46px}
+#nbh-designs .n-how-grid{margin-top:0}
+#nbh-designs .n-how-item small{margin-bottom:11px}
+#nbh-designs .n-how-item h3{font-size:27px}
+#nbh-designs .n-how-item p{font-size:12px}
+#nbh-designs .n-page-title{padding-block:38px 32px}
+#nbh-designs .n-page-title h1{margin-top:0;margin-bottom:12px;font-size:62px}
+#nbh-designs .n-page-title p{font-size:13px}
+#nbh-designs .n-page-title h1:last-child{margin-bottom:0}
+#nbh-designs .n-collection-page{padding-top:0;padding-bottom:55px}
+#nbh-designs .n-detail-copy>p{font-size:13px}
+#nbh-designs .n-detail-copy h1{margin-bottom:18px}
+#nbh-designs .n-detail-cta{margin-top:23px;font-size:12px}
+#nbh-designs .n-choices{margin-top:26px}
+#nbh-designs .n-inline-note{font-size:11px!important}
+#nbh-designs .n-photo-caption{font-size:11px!important}
+#nbh-designs .n-brand-card{width:100%;max-width:470px;height:auto;margin:0 auto;border-radius:7px}
+#nbh-designs .n-disclosure-content{padding-bottom:20px}
+#nbh-designs .n-disclosure-content>p{font-size:12px;line-height:1.8;margin-top:12px;max-width:550px}
+#nbh-designs .n-disclosure-content>p:first-child{margin-top:0}
+#nbh-designs .n-site summary{font-size:13px;padding-block:17px}
+#nbh-designs .n-simple-form{max-width:860px;padding-bottom:55px}
+#nbh-designs .n-simple-form .n-form-section{margin-bottom:25px}
+#nbh-designs .n-simple-form .n-form-section legend{font-size:28px}
+#nbh-designs .n-form-section legend small{font:400 12px/1.4 var(--n-sans);letter-spacing:0;color:var(--n-soft)}
+#nbh-designs .n-field{font-size:12px}
+#nbh-designs .n-field input,#nbh-designs .n-field select,#nbh-designs .n-field textarea{font-size:13px;min-height:45px}
+#nbh-designs .n-field textarea{min-height:86px}
+#nbh-designs .n-size-help{margin-top:12px;font-size:11px}
+#nbh-designs .n-extra-details{margin-bottom:22px;border-top:1px solid var(--n-line)}
+#nbh-designs .n-extra-details .n-form-grid{padding-top:7px}
+#nbh-designs .n-extra-details>p{padding-bottom:18px}
+#nbh-designs .n-extra-details summary .muted{color:var(--n-soft);font-size:11px}
+#nbh-designs .n-notes{margin-top:20px}
+#nbh-designs .n-upload{padding:17px}
+#nbh-designs .n-upload input{font-size:12px}
+#nbh-designs .n-form-submit{font-size:12px}
+#nbh-designs .n-form-menu{margin-top:23px;border-top:1px solid var(--n-line)}
+#nbh-designs .n-contact-social{margin-top:27px;display:flex;justify-content:space-between;gap:15px;font-size:12px;color:var(--n-soft);flex-wrap:wrap}
+#nbh-designs .n-about-grid{grid-template-columns:.85fr 1.15fr;gap:65px;padding-bottom:65px;max-width:1180px}
+#nbh-designs .n-about-grid>.n-hailey-portrait{width:100%;aspect-ratio:4/5;max-height:550px;object-fit:cover;object-position:50% 53%;border-radius:220px 220px 7px 7px}
+#nbh-designs .n-about-grid p{font-size:14px;max-width:430px;line-height:1.9}
+#nbh-designs .n-about-grid h2{font-size:46px}
+#nbh-designs .n-signature{font-size:29px;margin-top:27px}
+#nbh-designs .n-guide-grid{max-width:1100px;gap:35px;padding-bottom:55px}
+#nbh-designs .n-guide-card{padding:8px 30px 30px}
+#nbh-designs .n-guide-step p{font-size:13px}
+#nbh-designs .n-guide-note{margin-top:0;margin-bottom:18px}
+#nbh-designs .n-guide-note p{font-size:13px}
+#nbh-designs .n-faq{max-width:800px;padding-bottom:55px}
+#nbh-designs .n-footer{margin-top:0;padding-block:28px 17px}
+#nbh-designs .n-footer .n-brand-logo{width:62px;height:62px}
+#nbh-designs .n-footer .n-brand{font-size:27px!important}
+#nbh-designs .n-footer-links,#nbh-designs .n-footer-links button{font-size:12px}
+#nbh-designs .n-footer-bottom{font-size:10px;padding-top:17px;margin-top:22px;align-items:center}
+#nbh-designs .n-preview-link{border:0;background:none;padding:0;font:inherit;color:var(--n-soft);text-decoration:underline;text-underline-offset:3px}
+#nbh-designs .n-sheet-page{padding-bottom:55px}
+#nbh-designs .n-brand>span{display:inline-flex;align-items:baseline;gap:5px}
+#nbh-designs .n-brand .n-brand-heart{display:inline-block;align-self:flex-start;color:var(--n-accent);font:400 22px/1 Georgia,serif;letter-spacing:0;margin:0 0 0 2px;transform:rotate(12deg)}
+#nbh-designs .n-pricing-section{padding-top:40px;padding-bottom:4px}
+#nbh-designs .n-price-menu{max-width:980px;margin:0 auto;padding:33px 38px 22px;border:1px solid #e7a0b0;border-radius:22px;background:#fbe7e9;color:#994858;box-shadow:inset 0 0 0 6px #fdf1f0}
+#nbh-designs .n-price-menu-heading{display:flex;justify-content:center;align-items:center;gap:17px;margin-bottom:20px;padding:11px 16px;background:#f5d1d9;border-radius:40px}
+#nbh-designs .n-price-menu-heading h2{font-family:var(--n-serif);font-size:32px;line-height:1.15;letter-spacing:.065em;text-transform:uppercase;color:#994858;text-align:center}
+#nbh-designs .n-price-heart{font:400 28px/1 Georgia,serif;color:#ad5769}
+#nbh-designs .n-price-menu dl{margin:0}
+#nbh-designs .n-price-row{display:flex;justify-content:space-between;align-items:baseline;gap:15px;padding:9px 0;font-family:var(--n-serif);font-size:26px;line-height:1.2}
+#nbh-designs .n-price-row dt{display:flex;flex:1;align-items:baseline;gap:17px;min-width:0}
+#nbh-designs .n-price-row dt:after{content:'';flex:1;min-width:12px;border-bottom:1px solid #dfa8b4;transform:translateY(-5px)}
+#nbh-designs .n-price-row dd{margin:0;white-space:nowrap;font-variant-numeric:tabular-nums}
+#nbh-designs .n-price-extras{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:23px}
+#nbh-designs .n-price-extras>section{border:1px solid #e4a4b3;border-radius:13px;padding:18px 21px}
+#nbh-designs .n-price-extras h3{font-size:27px;line-height:1.1;letter-spacing:.035em;color:#994858;margin-bottom:15px}
+#nbh-designs .n-price-extras h3 span{font-family:Georgia,serif;font-size:25px;margin-left:5px}
+#nbh-designs .n-price-extras .n-price-row{font-size:20px;padding-block:6px;gap:10px}
+#nbh-designs .n-price-extras .n-price-row dt:after{display:none}
+#nbh-designs .n-price-extras ul{list-style:none;margin:0;padding:0}
+#nbh-designs .n-price-extras li{position:relative;font-size:13px;line-height:1.6;padding-left:22px;margin-bottom:13px}
+#nbh-designs .n-price-extras li:before{content:'♥';position:absolute;left:0;color:#b86577;font-size:15px}
+#nbh-designs .n-price-extras li:last-child{margin-bottom:0}
+#nbh-designs .n-price-extras li small{display:block;font-size:11px;line-height:1.6;margin-top:4px;color:#a36b74}
+#nbh-designs .n-price-signature{font:400 25px/1.3 'Caveat',cursive;color:#a15d6c;text-align:center;margin-top:18px}
+#nbh-designs .n-price-menu-compact{padding:22px 20px 16px;border-radius:15px;box-shadow:none}
+#nbh-designs .n-price-menu-compact .n-price-menu-heading{gap:10px;padding:10px;margin-bottom:12px}
+#nbh-designs .n-price-menu-compact .n-price-menu-heading h2{font-size:23px;letter-spacing:.03em}
+#nbh-designs .n-price-menu-compact .n-price-row{font-size:21px;padding-block:7px}
+#nbh-designs .n-price-menu-compact .n-price-extras{grid-template-columns:1fr;gap:12px;margin-top:16px}
+#nbh-designs .n-price-menu-compact .n-price-extras .n-price-row{font-size:19px;padding-block:5px}
+#nbh-designs .n-price-menu-compact .n-price-extras h3{font-size:25px}
+@media(max-width:620px){#nbh-designs .n-brand .n-brand-heart{font-size:18px;margin-left:0}#nbh-designs .n-brand>span{gap:4px}#nbh-designs .n-pricing-section{padding-top:29px}#nbh-designs .n-price-menu{padding:24px 20px 18px;border-radius:19px;box-shadow:inset 0 0 0 4px #fdf1f0}#nbh-designs .n-price-menu-heading{gap:10px;padding:11px 9px;margin-bottom:17px}#nbh-designs .n-price-menu-heading h2{font-size:25px;letter-spacing:.025em}#nbh-designs .n-price-heart{font-size:23px}#nbh-designs .n-price-row{font-size:22px;gap:12px;padding-block:9px}#nbh-designs .n-price-row dt{gap:10px}#nbh-designs .n-price-extras{grid-template-columns:1fr;gap:13px;margin-top:20px}#nbh-designs .n-price-extras>section{padding:18px}#nbh-designs .n-price-extras h3{font-size:27px;margin-bottom:14px}#nbh-designs .n-price-extras .n-price-row{font-size:21px}#nbh-designs .n-price-extras li{font-size:12px}#nbh-designs .n-price-signature{font-size:25px;margin-top:18px}#nbh-designs .n-price-menu-compact{padding:19px 15px 16px;box-shadow:none}#nbh-designs .n-price-menu-compact .n-price-menu-heading h2{font-size:22px}#nbh-designs .n-price-menu-compact .n-price-row{font-size:21px}}
+@media(max-width:370px){#nbh-designs .n-price-menu{padding-inline:15px}#nbh-designs .n-price-menu-heading h2{font-size:22px}#nbh-designs .n-price-row{font-size:21px}#nbh-designs .n-price-extras .n-price-row{font-size:19px}}
+@media(max-width:1050px){#nbh-designs .n-navlinks{gap:16px}#nbh-designs .n-navlinks button{font-size:11px}#nbh-designs .n-brand{font-size:27px!important;gap:10px}#nbh-designs .n-brand-logo{width:63px;height:63px}#nbh-designs .n-nav-end{gap:12px}#nbh-designs .n-hero{gap:38px;min-height:510px}#nbh-designs .n-blush .n-hero-copy h1{font-size:76px}#nbh-designs .n-hero-copy p{font-size:13px}#nbh-designs .n-about-grid{gap:42px}}
+@media(max-width:850px){#nbh-designs .n-navlinks{gap:15px}#nbh-designs .n-nav-contact{display:none}#nbh-designs .n-brand{font-size:25px!important}#nbh-designs .n-brand-logo{width:58px;height:58px}#nbh-designs .n-nav{min-height:93px}#nbh-designs .n-navlinks button{font-size:10px}#nbh-designs .n-hero{gap:28px;min-height:470px}#nbh-designs .n-blush .n-hero-copy h1{font-size:66px}#nbh-designs .n-hero .n-kicker{font-size:8px}#nbh-designs .n-hero-copy p{font-size:12px}#nbh-designs .n-values{gap:35px;font-size:10px}#nbh-designs .n-custom-banner{grid-template-columns:1fr auto;padding:27px}#nbh-designs .n-custom-doodle{display:none}#nbh-designs .n-custom-banner h2{font-size:35px}#nbh-designs .n-custom-banner p{font-size:11px}#nbh-designs .n-about-grid h2{font-size:38px}#nbh-designs .n-about-grid p{font-size:13px}}
+@media(max-width:700px){#nbh-designs .n-navlinks{display:none}#nbh-designs .n-mobile-menu{display:block}#nbh-designs .n-nav-contact{display:block}#nbh-designs .n-nav-end{gap:13px}#nbh-designs .n-simple-form{max-width:700px}}
+@media(max-width:620px){#nbh-designs .n-nav{min-height:90px;gap:8px}#nbh-designs .n-brand{font-size:26px!important;gap:9px}#nbh-designs .n-brand-logo{width:57px;height:57px}#nbh-designs .n-nav-contact{display:none}#nbh-designs .n-nav-end{gap:5px}#nbh-designs .n-announcement{font-size:8px}#nbh-designs .n-blush .n-hero{grid-template-columns:1fr;gap:27px;min-height:0;padding-top:30px;padding-bottom:30px}#nbh-designs .n-blush .n-hero-copy h1{font-size:76px;line-height:.96;margin-top:18px}#nbh-designs .n-hero-copy p{font-size:13px}#nbh-designs .n-hero .n-kicker{font-size:9px}#nbh-designs .n-hero-figure{margin:0 13px}#nbh-designs .n-blush .n-hero-photo{aspect-ratio:1.04;max-height:400px;border-radius:200px 200px 7px 7px}#nbh-designs .n-hero-figure figcaption{font-size:22px;padding-top:14px}#nbh-designs .n-values{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 20px;padding:16px 15px;font-size:9px}#nbh-designs .n-values span:before{margin-right:6px}#nbh-designs .n-section{padding-block:34px}#nbh-designs .n-section-head h2{font-size:39px}#nbh-designs .n-product-image{aspect-ratio:1.1}#nbh-designs .n-product-caption .n-link{font-size:10px}#nbh-designs .n-product-title{font-size:26px!important}#nbh-designs .n-filters{gap:7px}#nbh-designs .n-filters button{font-size:10px;padding-inline:12px}#nbh-designs .n-filters .n-result-count{font-size:10px;margin-left:0}#nbh-designs .n-custom-banner{grid-template-columns:1fr;gap:20px;padding:25px}#nbh-designs .n-custom-banner h2{font-size:38px!important}#nbh-designs .n-custom-banner p{font-size:12px}#nbh-designs .n-custom-banner .n-btn{font-size:11px}#nbh-designs .n-how{padding-block:29px 35px}#nbh-designs .n-how-grid{gap:22px;margin-top:0}#nbh-designs .n-how-item h3{font-size:28px}#nbh-designs .n-how-item p{font-size:12px}#nbh-designs .n-page-title{padding-top:30px;padding-bottom:25px}#nbh-designs .n-page-title h1{font-size:51px}#nbh-designs .n-page-title p{font-size:12px}#nbh-designs .n-collection-page{padding-top:0}#nbh-designs .n-catalog-note{font-size:10px}#nbh-designs .n-field input,#nbh-designs .n-field select,#nbh-designs .n-field textarea{font-size:16px}#nbh-designs .n-simple-form .n-form-section legend{font-size:27px}#nbh-designs .n-simple-form{padding-bottom:40px}#nbh-designs .n-measure-row{gap:5px}#nbh-designs .n-measure-row .n-field{font-size:9px}#nbh-designs .n-measure-row input{font-size:14px;padding-inline:5px}#nbh-designs .n-about-grid{grid-template-columns:1fr;gap:28px;padding-bottom:40px}#nbh-designs .n-about-grid>.n-hailey-portrait{aspect-ratio:4/5;max-height:460px;width:100%;max-width:370px;margin-inline:auto}#nbh-designs .n-about-grid h2{font-size:42px}#nbh-designs .n-about-grid p{font-size:13px;max-width:none}#nbh-designs .n-guide-grid{padding-bottom:40px;gap:22px}#nbh-designs .n-guide-card{padding:0 24px 26px}#nbh-designs .n-guide-step p{font-size:12px}#nbh-designs .n-guide-note p{font-size:12px}#nbh-designs .n-disclosure-content>p{font-size:12px}#nbh-designs .n-footer .n-brand-logo{width:55px;height:55px}#nbh-designs .n-footer-links,#nbh-designs .n-footer-links button{font-size:11px}#nbh-designs .n-footer-bottom{font-size:9px;gap:13px}#nbh-designs .n-footer-bottom>span:last-child{display:none}}
+@media(max-width:370px){#nbh-designs .n-brand{font-size:24px!important}#nbh-designs .n-brand-logo{width:49px;height:49px}#nbh-designs .n-blush .n-hero-copy h1{font-size:67px}#nbh-designs .n-product-title{font-size:24px!important}#nbh-designs .n-product-caption .n-link{font-size:9px}}
+@media(prefers-reduced-motion:reduce){html,body{scroll-behavior:auto}}
+
+/* Compact inquiry forms. */
+#nbh-designs .n-site .n-simple-form.n-wrap{max-width:620px;padding-inline:24px;padding-bottom:52px}
+#nbh-designs .n-form-page .n-page-title{padding-top:33px;padding-bottom:24px}
+#nbh-designs .n-form-page .n-page-title h1{font-size:49px;margin-bottom:10px}
+#nbh-designs .n-form-page .n-page-title p{max-width:345px;font-size:12px;line-height:1.75}
+#nbh-designs .n-simple-form .n-inquiry-form{padding:29px;background:#fffcf9;border:1px solid #e5d8d2;border-radius:15px;box-shadow:0 8px 30px #68483c06}
+#nbh-designs .n-simple-form .n-form-section{margin-bottom:25px}
+#nbh-designs .n-simple-form .n-form-section legend{font-size:24px;padding-bottom:11px;margin-bottom:17px;border-color:#eee3dd}
+#nbh-designs .n-simple-form .n-form-grid{gap:16px 13px}
+#nbh-designs .n-simple-form .n-field{font-size:11px;gap:7px}
+#nbh-designs .n-simple-form .n-field input,#nbh-designs .n-simple-form .n-field select,#nbh-designs .n-simple-form .n-field textarea{min-height:44px;padding:11px 12px;background:#fbf7f3;border-color:#e4d9d1;border-radius:7px;font-size:12px;transition:border-color .18s,box-shadow .18s}
+#nbh-designs .n-simple-form .n-field input:focus,#nbh-designs .n-simple-form .n-field select:focus,#nbh-designs .n-simple-form .n-field textarea:focus{border-color:#b67f87;box-shadow:0 0 0 3px #efd8d640;outline:2px solid transparent}
+#nbh-designs .n-simple-form .n-field textarea{min-height:94px;line-height:1.7}
+#nbh-designs .n-simple-form .n-selected-design{padding:10px;margin-bottom:24px;gap:13px;border-color:#eaded7;border-radius:9px;background:#f7eee8}
+#nbh-designs .n-simple-form .n-selected-design img{width:67px;border-radius:5px}
+#nbh-designs .n-simple-form .n-selected-design strong{font-family:var(--n-serif);font-size:25px;font-weight:400}
+#nbh-designs .n-simple-form .n-size-help{font-size:10px;margin-top:8px;min-height:30px}
+#nbh-designs .n-simple-form .n-upload{padding:17px;border-color:#d8c6bd;border-radius:9px;background:#f7f0eb}
+#nbh-designs .n-simple-form .n-upload label{font-size:11px;gap:13px}
+#nbh-designs .n-simple-form .n-upload input{font-size:11px;width:100%;color:var(--n-soft)}
+#nbh-designs .n-simple-form .n-upload input::file-selector-button{padding:7px 10px;margin-right:10px;border:1px solid #dec8c5;border-radius:5px;background:#fffcf9;color:#80545c;font:inherit;cursor:pointer}
+#nbh-designs .n-simple-form .n-upload .n-inline-note{font-size:10px!important;margin-top:9px!important}
+#nbh-designs .n-simple-form .n-extra-details{border:1px solid #e8dcd5;border-radius:8px;margin-bottom:23px;background:#fbf7f3;overflow:hidden}
+#nbh-designs .n-simple-form .n-extra-details summary{font-size:11px;padding:13px 32px 13px 13px}
+#nbh-designs .n-simple-form .n-extra-details summary:after{right:13px;top:9px;font-size:20px}
+#nbh-designs .n-simple-form .n-extra-details summary .muted{font-size:10px}
+#nbh-designs .n-simple-form .n-extra-details .n-form-grid{padding:5px 13px 13px}
+#nbh-designs .n-simple-form .n-extra-details>p{margin:0!important;padding:0 13px 14px;font-size:10px!important}
+#nbh-designs .n-simple-form .n-notes{margin-top:0}
+#nbh-designs .n-simple-form .n-form-submit{min-height:47px;margin-top:21px;border-radius:7px;font-size:12px;justify-content:center}
+#nbh-designs .n-simple-form .n-inquiry-form>.n-inline-note{text-align:center;font-size:10px!important;margin-top:12px!important}
+#nbh-designs .n-simple-form .n-form-menu{margin-top:19px;border:0}
+#nbh-designs .n-simple-form .n-form-menu>details>summary{font-size:11px;padding-block:13px;color:var(--n-soft)}
+#nbh-designs .n-simple-form .n-contact-social{font-size:11px;margin-top:20px;justify-content:center;gap:9px 20px}
+@media(max-width:620px){#nbh-designs .n-site .n-simple-form.n-wrap{padding-inline:20px;padding-bottom:35px}#nbh-designs .n-simple-form .n-inquiry-form{padding:22px 20px;border-radius:12px}#nbh-designs .n-form-page .n-page-title{padding-top:27px;padding-bottom:21px}#nbh-designs .n-form-page .n-page-title h1{font-size:44px}#nbh-designs .n-form-page .n-page-title p{font-size:12px;max-width:300px}#nbh-designs .n-simple-form .n-field input,#nbh-designs .n-simple-form .n-field select,#nbh-designs .n-simple-form .n-field textarea{font-size:16px}#nbh-designs .n-simple-form .n-measure-row .n-field{font-size:8px}#nbh-designs .n-simple-form .n-measure-row input{font-size:14px;padding-inline:4px}#nbh-designs .n-simple-form .n-form-section legend{font-size:24px}}
+@media(max-width:420px){#nbh-designs .n-site .n-simple-form.n-wrap{padding-inline:16px}#nbh-designs .n-simple-form .n-inquiry-form{padding:21px 17px}#nbh-designs .n-simple-form .n-form-section:first-of-type .n-form-grid{grid-template-columns:1fr}#nbh-designs .n-simple-form .n-form-grid{gap:15px 11px}}
+
+#nbh-designs .n-new-sets{display:flex;align-items:center;justify-content:space-between;gap:35px;padding-top:32px;padding-bottom:38px;border-top:1px solid var(--n-line)}
+#nbh-designs .n-new-sets h2{font-size:37px;margin-bottom:12px}
+#nbh-designs .n-new-sets p{font-size:12px;line-height:1.8;max-width:530px}
+#nbh-designs .n-new-sets .n-btn{flex-shrink:0;font-size:11px;border-color:#d9c4c1;background:#f7eeea}
+/* Readable controls and a full-width footer. */
+#nbh-designs .n-site .n-btn{font-size:14px}
+#nbh-designs .n-site .n-link{font-size:13px}
+#nbh-designs .n-site .n-navlinks button,#nbh-designs .n-site .n-nav-contact{font-size:13px}
+#nbh-designs .n-site .n-filters button{font-size:12px}
+#nbh-designs .n-site .n-values{font-size:15px;gap:20px 65px;line-height:1.6;flex-wrap:wrap}
+#nbh-designs .n-site .n-footer{width:100%;max-width:none}
+#nbh-designs .n-site .n-footer-links,#nbh-designs .n-site .n-footer-links button{font-size:14px}
+#nbh-designs .n-site .n-footer-bottom{font-size:12px}
+#nbh-designs .n-site .n-preview-link{font-size:12px}
+#nbh-designs .n-site .n-new-sets{margin-top:34px;border-top:0;padding-bottom:12px}
+@media(max-width:620px){#nbh-designs .n-site .n-values{font-size:13px;gap:10px 20px}#nbh-designs .n-site .n-values span:nth-child(even){justify-self:auto}#nbh-designs .n-site .n-product-caption .n-link{font-size:12px;white-space:normal}#nbh-designs .n-site .n-footer-links{gap:22px}#nbh-designs .n-site .n-footer-bottom{font-size:11px}#nbh-designs .n-site .n-new-sets{margin-top:10px}}
+@media(max-width:700px){#nbh-designs .n-new-sets{flex-direction:column;align-items:flex-start;gap:20px;padding-top:27px;padding-bottom:32px}#nbh-designs .n-new-sets h2{font-size:34px}#nbh-designs .n-new-sets p{font-size:12px;max-width:450px}#nbh-designs .n-new-sets .n-btn{min-height:44px}}
+
+/* Photo and title share one clear link; saving stays a separate control. */
+#nbh-designs .n-site .n-product-link{display:block;text-decoration:none;border-radius:3px}
+#nbh-designs .n-site .n-product-link:hover{text-decoration:none}
+#nbh-designs .n-site .n-product-link:focus-visible{outline:2px solid var(--n-accent);outline-offset:5px}
+#nbh-designs .n-site .n-product-caption{flex-direction:row;align-items:center;justify-content:flex-start;gap:8px}
+#nbh-designs .n-site .n-product-title{flex:0 1 auto;min-width:0}
+#nbh-designs .n-product-chevron{font:400 19px/1 var(--n-sans);color:var(--n-accent);flex-shrink:0}
+
+/* Live menu estimate. */
+#nbh-designs .n-estimate{margin-top:22px;padding:18px 20px;background:#f8ece9;border:1px solid #e7cecd;border-radius:10px}
+#nbh-designs .n-estimate-heading{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:12px;color:var(--n-accent)}
+#nbh-designs .n-estimate-heading strong{font:500 30px/1.2 var(--n-serif);color:var(--n-ink);white-space:nowrap}
+#nbh-designs .n-estimate dl{margin:14px 0 0;padding-top:11px;border-top:1px solid #e7cecd}
+#nbh-designs .n-estimate dl>div{display:flex;justify-content:space-between;gap:14px;padding-block:3px;font-size:12px}
+#nbh-designs .n-estimate dd{margin:0;white-space:nowrap}
+#nbh-designs .n-site .n-estimate p{font-size:11px;line-height:1.7;margin-top:11px}
+#nbh-designs .n-estimate-quantity{color:var(--n-accent)}
+#nbh-designs .n-measurement-details{border:1px solid var(--n-line);border-radius:7px;padding:0 12px;background:#fbf7f3}
+#nbh-designs .n-measurement-details summary{font-size:11px;padding-block:12px}
+#nbh-designs .n-measurement-details>p{font-size:11px;padding-bottom:12px}
+#nbh-designs .n-simple-form .n-measurement-details .n-form-grid{padding-bottom:16px}
+@media(max-width:620px){#nbh-designs .n-estimate{padding:16px}#nbh-designs .n-estimate-heading strong{font-size:28px}}
