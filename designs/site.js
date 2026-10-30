@@ -16,7 +16,7 @@
   const lengths = ['Help me choose','Short','Medium','Long','Extra long'];
   const charmChoices = ['None','1–2 charms','3 or more charms','Help me decide'];
   const freshSelection = () => ({size:sizeHelp,shape:'Help me choose',length:'Help me choose',style:'Help me decide',charms:'None'});
-  const state = {view:'home',product:'',filter:'All designs',favorites:new Set(),selection:freshSelection(),photoUrls:[],lastRow:null};
+  const state = {view:'home',product:'',filter:'All designs',favorites:new Set(),selection:freshSelection(),photoUrls:[],lastRow:null,lastSubmissionLive:false};
   const rows = [];
   try { state.favorites = new Set(JSON.parse(localStorage.getItem('hailey-saved-designs') || '[]').filter(id => byId(id))); } catch {}
   const wordmark = `<img class="n-brand-logo" src="${brand.logo}" alt=""><span>Nails <i>by Hailey</i><small class="n-brand-heart" aria-hidden="true">♡</small></span>`;
@@ -114,12 +114,12 @@
   function faq() {
     return `${pageTitle('Good to <em>know.</em>')}<div class="n-faq n-wrap">${accordion('Price menu',menuImage())}${accordion('How to apply',careImage())}${accordion('How do I order?','<p>Choose a design and send an inquiry. Hailey confirms your quote, fit, and timing, then arranges the order with you directly.</p>')}${accordion('Are press-ons reusable?','<p>Yes, with gentle removal and care. Rewear depends on your adhesive, application, and removal. Never pull nails off.</p>')}${accordion('Shipping, pickup & returns','<p>Confirm delivery arrangements, processing times, and returns terms with Hailey before ordering.</p>')}<div class="n-actions">${button('contact','Ask Hailey','n-btn')}</div></div>`;
   }
-  const headers = ['Reference','Name','Email','Phone','Instagram','Contact via','Design','Shape','Length','Size','Left widths (mm)','Right widths (mm)','Quantity','Colors','Style','Charms','Requested date','Notes','Reference files','Estimated total','Estimate type','Status','Submitted'];
+  const headers = ['Reference','Name','Email','Phone','Instagram','Contact via','Design','Shape','Length','Size','Left widths','Right widths','Quantity','Colors','Style','Charms','Requested date','Notes','Reference files','Estimated total','Estimate type','Status','Submitted'];
   function sheet() {
-    return `${pageTitle('Inquiry <em>preview.</em>','Demo rows stay in this tab. No live Excel workbook is connected.')}<div class="n-wrap n-sheet-page"><div class="n-actions">${button('custom','Try a request')}${rows.length ? button('export','Download CSV','n-btn n-btn-light') + button('clear','Clear demo rows','n-link') : ''}</div><div class="n-sheet-wrap"><table class="n-sheet"><thead><tr>${headers.map(h => `<th scope="col">${escape(h)}</th>`).join('')}</tr></thead><tbody>${rows.length ? rows.map(row => `<tr>${headers.map(h => `<td>${escape(row[h] || '—')}</td>`).join('')}</tr>`).join('') : `<tr><td colspan="${headers.length}">Submit sample details to see an inquiry row here.</td></tr>`}</tbody></table></div></div>`;
+    return `${pageTitle('Inquiry <em>preview.</em>','Live inquiries are sent to Google Sheets; this page also shows local preview rows.')}<div class="n-wrap n-sheet-page"><div class="n-actions">${button('custom','Try a request')}${rows.length ? button('export','Download CSV','n-btn n-btn-light') + button('clear','Clear demo rows','n-link') : ''}</div><div class="n-sheet-wrap"><table class="n-sheet"><thead><tr>${headers.map(h => `<th scope="col">${escape(h)}</th>`).join('')}</tr></thead><tbody>${rows.length ? rows.map(row => `<tr>${headers.map(h => `<td>${escape(row[h] || '—')}</td>`).join('')}</tr>`).join('') : `<tr><td colspan="${headers.length}">Submit sample details to see an inquiry row here.</td></tr>`}</tbody></table></div></div>`;
   }
   function success() {
-    return `<div class="n-wrap"><div class="n-success"><span aria-hidden="true">♡</span><h1>Preview <em>saved.</em></h1><p>Your sample inquiry is in the demo sheet. Nothing was sent to Hailey.</p><div class="n-reference">${escape(state.lastRow.Reference)}</div><div class="n-actions">${button('sheet','View inquiry row')}${button('catalog','Back to designs','n-link')}</div></div></div>`;
+    return `<div class="n-wrap"><div class="n-success"><span aria-hidden="true">♡</span><h1>${state.lastSubmissionLive ? 'Request <em>sent.</em>' : 'Preview <em>saved.</em>'}</h1><p>${state.lastSubmissionLive ? 'Your inquiry was sent to Hailey.' : 'This local preview saved a sample inquiry in the browser only.'}</p><div class="n-reference">${escape(state.lastRow.Reference)}</div><div class="n-actions">${button('sheet','View inquiry row')}${button('catalog','Back to designs','n-link')}</div></div></div>`;
   }
   function releasePhotos() { state.photoUrls.forEach(url => URL.revokeObjectURL(url)); state.photoUrls = []; }
   function paint() {
@@ -206,13 +206,29 @@
     }
   });
   root.addEventListener('input',event => { if (event.target.name === 'quantity') updateEstimate(); });
-  root.addEventListener('submit',event => {
+  root.addEventListener('submit', async event => {
     const form = event.target; if (!form.matches('.n-inquiry-form')) return; event.preventDefault(); if (!form.reportValidity()) return;
     const data = new FormData(form), get = name => String(data.get(name) || '').trim();
     if (!get('name') || !get('email')) { formError(form,'Please add your name and email.'); return; }
-    const row = {Reference:`PREVIEW-${String(rows.length+1).padStart(3,'0')}`,Name:get('name'),Email:get('email'),Phone:get('phone'),Instagram:get('instagram'),'Contact via':get('contact_method') || 'Email',Design:get('design') || 'General question',Shape:get('shape'),Length:get('length'),Size:get('size'),'Left widths (mm)':get('size') === sizeHelp ? ['thumb','index','middle','ring','pinky'].map(f => get('left_'+f)).join(', ') : '','Right widths (mm)':get('size') === sizeHelp ? ['thumb','index','middle','ring','pinky'].map(f => get('right_'+f)).join(', ') : '',Quantity:get('quantity') || (state.view === 'contact' ? '' : '1'),Colors:get('colors'),Style:get('style'),Charms:get('charms'),'Requested date':get('requested_date'),Notes:get('notes'),'Reference files':[...(form.elements.namedItem('reference_photos')?.files || [])].map(file => file.name).join(', '),Status:'New inquiry',Submitted:new Date().toISOString()};
+    const row = {Reference:`NBH-${String(Date.now()).slice(-8)}`,Name:get('name'),Email:get('email'),Phone:get('phone'),Instagram:get('instagram'),'Contact via':get('contact_method') || 'Email',Design:get('design') || 'General question',Shape:get('shape'),Length:get('length'),Size:get('size'),'Left widths':get('size') === sizeHelp ? ['thumb','index','middle','ring','pinky'].map(f => get('left_'+f)).join(', ') : '','Right widths':get('size') === sizeHelp ? ['thumb','index','middle','ring','pinky'].map(f => get('right_'+f)).join(', ') : '',Quantity:get('quantity') || (state.view === 'contact' ? '' : '1'),Colors:get('colors'),Style:get('style'),Charms:get('charms'),'Requested date':get('requested_date'),Notes:get('notes'),'Reference files':[...(form.elements.namedItem('reference_photos')?.files || [])].map(file => file.name).join(', '),Status:'New inquiry',Submitted:new Date().toISOString()};
     if (state.view !== 'contact') { const estimate = currentEstimate(); row['Estimated total'] = estimate.total === null ? 'Quote needed' : money(estimate.total); row['Estimate type'] = !estimate.tier ? 'Quote needed' : estimate.starting ? 'Starting estimate' : 'Estimate'; }
-    rows.push(row); state.lastRow = row; navigate('sent');
+    const submitButton = form.querySelector('.n-form-submit'), originalLabel = submitButton.textContent;
+    submitButton.disabled = true; submitButton.textContent = 'Sending…'; formError(form,'');
+    const localPreview = location.protocol === 'file:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+    try {
+      if (!localPreview) {
+        const response = await fetch('/.netlify/functions/submit-inquiry',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(row)});
+        const result = await response.json().catch(() => ({ok:false}));
+        if (!response.ok || !result.ok) throw new Error(result.error || 'Could not send inquiry');
+        state.lastSubmissionLive = true;
+      } else {
+        state.lastSubmissionLive = false;
+      }
+      rows.push(row); state.lastRow = row; navigate('sent');
+    } catch (error) {
+      submitButton.disabled = false; submitButton.textContent = originalLabel;
+      formError(form,'We could not send this inquiry right now. Please try again.');
+    }
   });
   window.addEventListener('hashchange',route);
   route();
